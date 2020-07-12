@@ -3,6 +3,17 @@ jobs:
   build:
     docker:
       - image: circleci/node:10
+    branches:
+      only:
+        - master
     steps:
-      - run: echo "A first pro"
-      - run: npm -v
+      - add_ssh_keys:
+        fingerprints:
+          - "4c:e7:92:e2:1d:59:01:14:eb:74:86:3e:75:b7:e0:29"
+      - checkout
+      - run:
+        name: Install
+        command: yarn install
+      - run:
+        name: Build
+        command: yarn build
