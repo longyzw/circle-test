@@ -8,8 +8,8 @@ jobs:
         - master
     steps:
       - add_ssh_keys:
-        fingerprints:
-          - "4c:e7:92:e2:1d:59:01:14:eb:74:86:3e:75:b7:e0:29"
+          fingerprints:
+            - "4c:e7:92:e2:1d:59:01:14:eb:74:86:3e:75:b7:e0:29"
       - checkout
       - run:
           name: Install
