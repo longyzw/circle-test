@@ -1,0 +1,8 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - images: circleci/node:10
+    steps:
+      - run: echo "A first pro"
+      - run: npm -v
